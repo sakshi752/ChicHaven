@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroImages = ({img,imgTitle}) => {
   return (
-    <div className="relative max-h-52 cursor-pointer"> 
+    <div className="relative max-h-[220px] cursor-pointer"> 
         <img src={img} alt={imgTitle} className='h-full w-full object-cover ' />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex justify-center  items-center">
