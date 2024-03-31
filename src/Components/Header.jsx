@@ -3,6 +3,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from "../store/cart";
+import { FaTimes } from 'react-icons/fa';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -28,10 +29,12 @@ const Header = () => {
       </div>
       {cartIsOpen && (
         <div className="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50 z-50">
-          <div className="bg-white p-4 rounded-lg shadow-lg">
+          <div className="bg-white p-4 rounded shadow-lg flex gap-10">
             {/* Cart content goes here */}
             <p>Cart content goes here...</p>
-            <button onClick={handleCartToggle}>Close</button>
+            <button onClick={handleCartToggle}>
+            <FaTimes />
+            </button>
           </div>
         </div>
       )}
