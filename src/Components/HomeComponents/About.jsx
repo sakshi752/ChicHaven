@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Assuming you are using React Router
+import { Link } from 'react-router-dom';
 
 const About = ({ aboutKey, img, aboutTitle, aboutdesc }) => {
   return (
     (aboutKey === 'left') ? (
       <div className='flex items-center flex-col md:flex-row gap-5 mt-10 bg-gray-50 hover:bg-gray-100'>
-        <div className=' max-w-[350px] flex justify-center items-center p-2 '>
+        <div className='max-w-[350px] flex justify-center items-center'>
           <img className="w-full object-cover shadow-md rounded" src={img} alt={aboutTitle} />
         </div>
 
@@ -36,7 +36,7 @@ const About = ({ aboutKey, img, aboutTitle, aboutdesc }) => {
               className="mt-4 px-6 py-2 bg-black text-white rounded shadow-md hover:bg-gray-95 transition-color duration-300">Shop Now</Link>
           </div>
         </div>
-        <div className=' max-w-[350px] flex justify-center items-center p-2 '>
+        <div className='max-w-[350px] flex justify-center items-center'>
           <img className="w-full object-cover shadow-md rounded" src={img} alt={aboutTitle} />
         </div>
       </div>
