@@ -8,12 +8,15 @@ const AboutSection = () => {
                 <img className="w-full object-cover  shadow-md" src="public/hero images/live comfortably.jpg" alt="Creative Living" />
             </div>
 
-            <div className='flexflex-col justify-center items-center'>
+            <div className='flexflex-col justify-center items-center pr-4'>
                 <h1 className="text-3xl font-semibold text-gray-900">Creative Harmonious Living</h1>
-                <p className="text-gray-600 mt-2">ChicHaven products are all made to seamlessly fit into your day-to-day living, enhancing your space with comfort and style.</p>
-                <Link 
-                to="/categories"
-                className="mt-4 px-6 py-2 bg-black text-white rounded shadow-md hover:bg-gray-950 transition-colors duration-300">Shop Now</Link>
+                
+                <div className='flex flex-col justify-center items-center p'>
+                    <p className="text-gray-600 mt-2 text-justify">ChicHaven products are all made to seamlessly fit into your day-to-day living, enhancing your space with comfort and style.</p>
+                    <Link
+                        to="/categories"
+                        className="mt-4 px-6 py-2 bg-black text-white rounded shadow-md hover:bg-gray-950 transition-colors duration-300">Shop Now</Link>
+                </div>
             </div>
         </div>
     );
