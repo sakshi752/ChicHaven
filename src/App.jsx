@@ -1,17 +1,21 @@
-import { Outlet } from "react-router-dom"
-import Container from "./Components/Container"
-import Header from "./Components/Header"
-import Footer from "./Components/Footer"
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Container from './Components/Container';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+
 function App() {
   return (
     <>
+
       <Container>
-        <Header/>
-        <Outlet/>
+        <Header />
+        <Outlet />
       </Container>
-      <Footer/>
+      <Footer />
     </>
-  )
+
+  );
 }
 
-export default App
+export default App;

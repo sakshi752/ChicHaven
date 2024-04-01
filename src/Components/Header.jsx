@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div className="flex justify-between items-center flex-col md:flex-row gap-y-3 py-3">
       <div className="flex items-center">
-        <Link to="/" className="text-2xl font-bold tracking-widest text-gray-900">ChicHaven</Link>
+        <Link to="/" className="text-4xl font-bold tracking-widest text-gray-900">ChicHaven</Link>
       </div>
       <div className="flex items-center gap-3">
         <Link to="/categories" className="text-gray-800 hover:text-gray-900 font-semibold">Categories</Link>
