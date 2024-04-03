@@ -13,7 +13,6 @@ const About = ({ aboutKey, img, aboutTitle, aboutdesc }) => {
           <h1 className="text-3xl font-semibold text-gray-900">
             {aboutTitle}
           </h1>
-
           <div className='flex flex-col justify-center items-center '>
             <p className="text-gray-600 mt-2 text-justify">{aboutdesc}</p>
             <Link
