@@ -157,7 +157,7 @@ const Categories = () => {
   //   // },
   // ]
 
-  return  (
+  return (
     <div className='mt-8 md:mt-10 min-h-screen'>
       <div className='flex flex-col gap-3 items-center'>
         <h1 className='text-xl font-semibold text-black'>{categoryTitle}</h1>
@@ -178,28 +178,32 @@ const Categories = () => {
             Soft toys
           </button>
         </div>
-        
+
         {/* Grid of cards */}
-        <div className='grid sm:grid-cols-1
+        <div className='mt-4 grid sm:grid-cols-1
         md:grid-cols-2 lg:grid-cols-3 gap-5 px-4'>
           {data.map((card) => (
             <div key={card.id} className="max-w-sm rounded overflow-hidden shadow-md bg-white cursor-pointer ">
-              <img className="w-full object-contain  max-h-[350px] h-[250px]" src={card.img} alt={card.title} />
+              <img className="w-full   max-h-[350px] h-[250px]" src={card.img} alt={card.title} />
 
               <div className='px-6 py-4'>
                 <h1 className="font-bold text-xl mb-2 text-gray-800">{card.Title}</h1>
-                <div className='flex justify-between items-center mb-4'>
-                  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                    Category: {card.category}
-                  </span>
-                </div>
-                <div className='flex justify-center gap-2'>
-                  <button className='inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
-                    Add
-                  </button>
-                  <button className='inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
-                    View
-                  </button>
+
+                <span className="inline-block bg-gray-200 rounded-full px-1 py-1 text-sm font-semibold text-gray-700">
+                  Category: {card.category}
+                </span>
+
+                <div className='flex items-center
+                 justify-between mt-5'>
+                  <span className='text-xl font-semibold'>${card.price}</span>
+                  <div className='flex gap-2'>
+                    <button className='inline-block bg-gray-900 hover:bg-gray-950 text-white font-bold py-2 px-4 rounded'>
+                      Add
+                    </button>
+                    <button className='inline-block bg-gray-900 hover:bg-gray-950 text-white font-bold py-2 px-4 rounded'>
+                      View
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
