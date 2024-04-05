@@ -74,14 +74,14 @@ const Cart = () => {
 
     return (
         <div className="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50 z-50">
-            <div className='bg-white shadow-lg rounded w-[50vh] mx-3 overflow-y-auto max-h-[70vh] relative'>
+            <div className='bg-white shadow-lg rounded w-[60vh] mx-3 overflow-y-auto max-h-[70vh] relative'>
                 <button
-                    className='px-4 py-2 items-end absolute right-0 top-2'
+                    className='px-4 py-2 items-end absolute right-0 top-2 text-gray-950'
                     onClick={handleCartToggle}>
                     <FaTimes />
                 </button>
                 <div className='mt-9'>
-                    {dummyData.map((data) => <CartItem key={data.key} data={data} />)}
+                    {dummyData.map((data) => <CartItem key={data.key} img={data.img} title={data.Title} price={data.price}/>)}
                 </div>
             </div>
         </div>
