@@ -16,66 +16,6 @@ const cartSlice = createSlice({
             //     count: 1,
             //     totalPrice: 150
             // },
-            // {
-            //     key: 2,
-            //     img: "public/plants/img1.jpg",
-            //     Title: "Areca Palm Plant",
-            //     category: "plants",
-            //     desc: "",
-            //     price: 70,
-            //     count: 1,
-            //     totalPrice: 70
-            // },
-            // {
-            //     key: 3,
-            //     img: "public/softToys/img1.jpg",
-            //     Title: "Reversible Plushie Octopus",
-            //     category: "soft toys",
-            //     desc: "",
-            //     price: 25,
-            //     count: 1,
-            //     totalPrice: 25
-            // },
-            // {
-            //     key: 4,
-            //     img: "public/lamps/img1.avif",
-            //     Title: "Table lamp",
-            //     category: "lamps",
-            //     desc: "",
-            //     price: 45,
-            //     count: 1,
-            //     totalPrice: 45
-            // },
-            // {
-            //     key: 5,
-            //     img: "public/furniture/img2.jpg",
-            //     Title: "Wall Shelf",
-            //     category: "furniture",
-            //     desc: "",
-            //     price: 90,
-            //     count: 1,
-            //     totalPrice: 90
-            // },
-            // {
-            //     key: 6,
-            //     img: "public/plants/img2.jpg",
-            //     Title: "Bambino Natural",
-            //     category: "plants",
-            //     desc: "",
-            //     price: 60,
-            //     count: 1,
-            //     totalPrice: 60
-            // },
-            // {
-            //     key: 7,
-            //     img: "public/softToys/img2.webp",
-            //     Title: "Unicorn",
-            //     category: "soft toys",
-            //     desc: "",
-            //     price: 35,
-            //     count: 1,
-            //     totalPrice: 35
-            // }
         ],
         totalAmt: 0,
     },
@@ -93,9 +33,11 @@ const cartSlice = createSlice({
                 state.items.push(newItem);
                 state.totalAmt += newItem.price; // Increment totalAmt by the price of the added item
             } else {
-                alert('Item is already in the cart.');
+                // alert('Item is already in the cart.');
+                existingItem.count+=1;
+                existingItem.totalPrice=existingItem.count*existingItem.price
+                state.totalAmt=state.items.reduce((total, item) => total + item.totalPrice, 0);
             }
-            console.log(action.payload);
         },
         removeFromCart(state, action) {
             const cartItemId = action.payload;
