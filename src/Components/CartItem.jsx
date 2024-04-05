@@ -3,7 +3,7 @@ import { AiOutlineDelete } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from "../store/cart";
 
-const CartItem = ({ cartId, img, price, title }) => {
+const CartItem = ({ cartId, img, totalPrice, title }) => {
     const dispatch = useDispatch();
 
     // Fetch count for this item from Redux store
@@ -30,7 +30,7 @@ const CartItem = ({ cartId, img, price, title }) => {
             <div className='flex flex-col flex-grow'>
                 <div className='flex justify-between'>
                     <span className='text-xl font-semibold'>{title}</span>
-                    <span>${price}</span>
+                    <span>${totalPrice}</span>
                 </div>
                 <div className='flex justify-between items-center mt-2'>
                     <div className='flex items-center'>

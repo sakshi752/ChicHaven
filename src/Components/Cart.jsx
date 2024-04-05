@@ -18,8 +18,10 @@ const Cart = () => {
     }
 
     // dummy data
-
     const cartData = useSelector(state => state.cart.items);
+
+    // total
+    const total = useSelector(state => state.cart.totalAmt);
 
     return (
         <div className="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50 z-50">
@@ -37,15 +39,15 @@ const Cart = () => {
                     (<div className='flex flex-col  mb-2'>
 
                         <div className='mt-2'>
-                            {cartData.map((data) => <CartItem key={data.key} cartId={data.key} img={data.img} title={data.Title} price={data.price} />)}
+                            {cartData.map((data) => <CartItem key={data.key} cartId={data.key} img={data.img} title={data.Title} totalPrice={data.totalPrice} />)}
                         </div>
                         <div className='flex justify-between items-center p-3'>
                             <h1 className='text-xl font-bold'>Total price</h1>
-                            <h1 className='text-lg font-semibold'>$500</h1>
+                            <h1 className='text-lg font-semibold'>${total}</h1>
                         </div>
 
                         <button
-                            className=' p-3 mt-5 bg-gray-900 text-white rounded text-md font-semibold w-[25%] mx-auto'
+                            className=' p-3 mt-5 bg-gray-900 text-white rounded text-md font-semibold  mx-auto'
                             onClick={clearCart}
                         >Clear cart</button>
                     </div>

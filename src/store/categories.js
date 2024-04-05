@@ -8,7 +8,7 @@ const categoriesData= [
     Title: "Wood Finish Table",
     category: "furniture",
     desc: "",
-    price: 150
+    price: 150,
   },
   {
     key: 2,
@@ -123,8 +123,6 @@ const categoriesData= [
     price: 75
   },
 ];
-
-
 
 const categoriesSlice = createSlice({
   name: "categories",

@@ -1,12 +1,22 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { cartActions } from "../store/cart";
 
 const CardComponent = ({ cardKey, img, Title, category, price }) => {
 
     const dispatch = useDispatch();
-    const handleAdd = () => {
-        dispatch(cartActions.addToCart());
+
+    const data = useSelector(state => state.categories.data);
+
+    const handleAdd = (cardKey) => {
+        const item = {
+            key: cardKey,
+            img: img,
+            Title: Title,
+            category: category,
+            price: price
+        };
+        dispatch(cartActions.addToCart(item));
     };
 
     return (
@@ -25,7 +35,7 @@ const CardComponent = ({ cardKey, img, Title, category, price }) => {
                     <div className="flex gap-2">
                         <button
                             className="inline-block bg-gray-900 hover:bg-gray-950 text-white font-bold py-2 px-4 rounded"
-                            onClick={handleAdd} // Corrected onClick handler
+                            onClick={()=>handleAdd(cardKey)} // Corrected onClick handler
                         >
                             Add
                         </button>
