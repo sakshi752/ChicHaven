@@ -1,17 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { data } from "autoprefixer";
 
 const cartSlice = createSlice({
     name: "cart",
     initialState: {
         isCartOpen: false,
-        items:  [
+        items: [
             {
                 key: 1,
                 img: "public/furniture/img1.webp",
                 Title: "Wood Finish Table",
                 category: "furniture",
                 desc: "",
-                price: 150
+                price: 150,
+                count: 0
             },
             {
                 key: 2,
@@ -19,15 +21,17 @@ const cartSlice = createSlice({
                 Title: "Areca Palm Plant",
                 category: "plants",
                 desc: "",
-                price: 70
+                price: 70,
+                count: 0
             },
             {
                 key: 3,
                 img: "public/softToys/img1.jpg",
-                Title: "Reversible Plushie Octopus ",
+                Title: "Reversible Plushie Octopus",
                 category: "soft toys",
                 desc: "",
-                price: 25
+                price: 25,
+                count: 0
             },
             {
                 key: 4,
@@ -35,15 +39,17 @@ const cartSlice = createSlice({
                 Title: "Table lamp",
                 category: "lamps",
                 desc: "",
-                price: 45
+                price: 45,
+                count: 0
             },
             {
                 key: 5,
                 img: "public/furniture/img2.jpg",
-                Title: "Wall Shelve",
+                Title: "Wall Shelf",
                 category: "furniture",
                 desc: "",
-                price: 90
+                price: 90,
+                count: 0
             },
             {
                 key: 6,
@@ -51,7 +57,8 @@ const cartSlice = createSlice({
                 Title: "Bambino Natural",
                 category: "plants",
                 desc: "",
-                price: 60
+                price: 60,
+                count: 0
             },
             {
                 key: 7,
@@ -59,9 +66,9 @@ const cartSlice = createSlice({
                 Title: "Unicorn",
                 category: "soft toys",
                 desc: "",
-                price: 35
-            },
-    
+                price: 35,
+                count: 0
+            }
         ]
     },
     reducers: {
@@ -75,8 +82,25 @@ const cartSlice = createSlice({
             const cartItemId = action.payload; // Assuming you're passing the item key as payload
             state.items = state.items.filter(item => item.key !== cartItemId)
         },
+        incrementItem(state, action) {
+            const cartItemId = action.payload;
+            const item = state.items.find(item => item.key === cartItemId);
+            if (item) {
+                item.count += 1;
+            }
+        },
+        decrementItem(state, action) {
+            const cartItemId = action.payload;
+            const item = state.items.find(item => item.key === cartItemId);
+            if (item && item.count > 0) {
+                item.count -= 1;
+            }
+            else{
+                
+            }
+        },
         clearCart(state) {
-            state.items=[]
+            state.items = []
         }
     }
 });

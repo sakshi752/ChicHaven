@@ -34,13 +34,18 @@ const Cart = () => {
                 </div>
 
                 {cartData.length === 0 ? <h1 className='text-center my-9 text-xl font-bold'>cart is empty</h1> :
-                    (<div className='flex flex-col items-center mb-2'>
+                    (<div className='flex flex-col  mb-2'>
 
                         <div className='mt-2'>
                             {cartData.map((data) => <CartItem key={data.key} cartId={data.key} img={data.img} title={data.Title} price={data.price} />)}
                         </div>
+                        <div className='flex justify-between items-center p-3'>
+                            <h1 className='text-xl font-bold'>Total price</h1>
+                            <h1 className='text-lg font-semibold'>$500</h1>
+                        </div>
+
                         <button
-                            className=' p-3 bg-gray-900 text-white rounded text-md font-semibold'
+                            className=' p-3 mt-5 bg-gray-900 text-white rounded text-md font-semibold w-[25%] mx-auto'
                             onClick={clearCart}
                         >Clear cart</button>
                     </div>
