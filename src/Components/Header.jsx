@@ -1,18 +1,14 @@
+// Header.js
 import React from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import { cartActions } from "../store/cart";
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { FaTimes } from 'react-icons/fa';
 import Cart from './Cart';
 
 const Header = () => {
-
   const dispatch = useDispatch();
-  // Accessing the cart state slice correctly
-  const cartIsOpen = useSelector(state => state.cart.isCartOpen);
-
+  const cartIsOpen = useSelector(state => state.cart.isCartOpen); 
 
   const handleCartToggle = () => {
     dispatch(cartActions.toggleCart());

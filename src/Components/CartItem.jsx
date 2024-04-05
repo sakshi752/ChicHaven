@@ -1,9 +1,17 @@
 import React from 'react'
 import { AiOutlineDelete } from 'react-icons/ai';
-const CartItem = ({img,price,title}) => {
+import { useDispatch} from 'react-redux';
+import { cartActions } from "../store/cart";
 
+const CartItem = ({cartId,img,price,title}) => {
+
+    const dispatch = useDispatch();
+    const removeItems = (cartId) => {
+        dispatch(cartActions.removeFromCart(cartId));
+      };
+    
   return (
-    <div className=" px-5 py-4 flex gap-5 ">
+    <div className=" px-2 py-4 flex gap-5 ">
     <div className='flex items-center'>
         <img src={img} alt={title} className='h-20 w-20 rounded' />
     </div>
@@ -18,7 +26,9 @@ const CartItem = ({img,price,title}) => {
                 <span className='px-2 py-1'>0</span>
                 <button className='font-bold text-white bg-green-500 py-1 px-2 rounded'>+</button>
             </div>
-            <button>
+            <button onClick={()=>removeItems(cartId)}
+            className='text-black'
+            >
             <AiOutlineDelete /> 
             </button> 
         </div>
