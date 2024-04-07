@@ -5,7 +5,7 @@ import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './Components/HomeComponents/Home.jsx'; // Remove duplicate import
 import Categories from './Components/CategoryComponents/Categories.jsx';
-import ProductPage from './Components/ProductPage.jsx';
+import ProductPage from './Components/ProductPageComponents/ProductPage.jsx';
 import { Provider } from 'react-redux';
 import cartStore from './store/index.js';
 import { createRoot } from 'react-dom/client';

@@ -24,7 +24,7 @@ const Cart = () => {
     const total = useSelector(state => state.cart.totalAmt);
 
     return (
-        <div className="fixed inset-0 flex justify-center items-center bg-gray-950 bg-opacity-50 ">
+        <div className="fixed inset-0 flex justify-center items-center bg-gray-950 bg-opacity-50 z-10">
             <div className='bg-white shadow-lg rounded w-[60vh] mx-3 overflow-y-auto max-h-[57vh] '>
                 {/* toggle for closing cart */}
                 <div className='flex justify-between px-4 py-2'>
