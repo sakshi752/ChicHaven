@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { cartActions } from "../store/cart";
 import { useDispatch, useSelector } from 'react-redux';
 import { FaTimes } from 'react-icons/fa';
@@ -22,6 +22,15 @@ const Cart = () => {
 
     // total
     const total = useSelector(state => state.cart.totalAmt);
+
+    // useEffect(() => {
+    //     const storedCartData = JSON.parse(window.localStorage.getItem("cartItems"))
+    //     if (storedCartData) {
+    //         storedCartData.forEach(item => dispatch(cartActions.addToCart(item)))
+    //     }
+    // }, [])
+
+    
 
     return (
         <div className="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50 z-50">
