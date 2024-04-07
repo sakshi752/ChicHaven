@@ -23,11 +23,10 @@ const Header = () => {
         {/* logo */}
         <Link to="/" className="text-4xl font-bold tracking-widest text-gray-900">ChicHaven</Link>
       </div>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-5">
         {/* navbar links */}
         <Link to="/categories" className="text-gray-800 hover:text-gray-900 font-semibold">Categories</Link>
-        <Link to="/productspage" className="text-gray-800 hover:text-gray-900 font-semibold">Product Page</Link>
-        
+       
         {/* condition for cart icon to show total no of items */}
         {/* handleCartToggle method is used to toggle the Cart Component */}
         {cartData.length === 0 ? (

@@ -39,9 +39,6 @@ const CardComponent = ({ cardKey, img, Title, category, price }) => {
                         >
                             Add
                         </button>
-                        <button className="inline-block bg-gray-900 hover:bg-gray-950 text-white font-bold py-2 px-4 rounded">
-                            View
-                        </button>
                     </div>
                 </div>
             </div>
