@@ -7,13 +7,13 @@ const Home = () => {
   const abouts = [
     {
       key: "left",
-      img: "/public/about images/img1.jpg",
+      img: "/about images/img1.jpg",
       aboutTitle: "Creative Harmonious Living",
       aboutDesc: "ChicHaven products are all made to seamlessly fit into your day-to-day living, enhancing your space with comfort and style."
     },
     {
       key: "right",
-      img: "/public/about images/img2.jpg",
+      img: "/about images/img2.jpg",
       aboutTitle: "Comfortable and Elegant Living",
       aboutDesc: "ChicHaven products are all made to seamlessly fit into your day-to-day living, enhancing your space with comfort and style."
     }

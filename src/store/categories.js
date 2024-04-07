@@ -4,7 +4,7 @@ import { data } from "autoprefixer";
 const categoriesData= [
   {
     key: 1,
-    img: "public/furniture/img1.webp",
+    img: "/furniture/img1.webp",
     Title: "Wood Finish Table",
     category: "furniture",
     desc: "",
@@ -12,7 +12,7 @@ const categoriesData= [
   },
   {
     key: 2,
-    img: "public/plants/img1.jpg",
+    img: "/plants/img1.jpg",
     Title: "Areca Palm Plant",
     category: "plants",
     desc: "",
@@ -20,7 +20,7 @@ const categoriesData= [
   },
   {
     key: 3,
-    img: "public/softToys/img1.jpg",
+    img: "/softToys/img1.jpg",
     Title: "Reversible Plushie Octopus ",
     category: "soft toys",
     desc: "",
@@ -28,7 +28,7 @@ const categoriesData= [
   },
   {
     key: 4,
-    img: "public/lamps/img1.avif",
+    img: "/lamps/img1.avif",
     Title: "Table lamp",
     category: "lamps",
     desc: "",
@@ -36,7 +36,7 @@ const categoriesData= [
   },
   {
     key: 5,
-    img: "public/furniture/img2.jpg",
+    img: "/furniture/img2.jpg",
     Title: "Wall Shelve",
     category: "furniture",
     desc: "",
@@ -44,7 +44,7 @@ const categoriesData= [
   },
   {
     key: 6,
-    img: "public/plants/img2.jpg",
+    img: "/plants/img2.jpg",
     Title: "Bambino Natural",
     category: "plants",
     desc: "",
@@ -52,7 +52,7 @@ const categoriesData= [
   },
   {
     key: 7,
-    img: "public/softToys/img2.webp",
+    img: "/softToys/img2.webp",
     Title: "Unicorn",
     category: "soft toys",
     desc: "",
@@ -60,7 +60,7 @@ const categoriesData= [
   },
   {
     key: 8,
-    img: "public/lamps/img2.avif",
+    img: "/lamps/img2.avif",
     Title: "reading lamp",
     category: "lamps",
     desc: "",
@@ -68,7 +68,7 @@ const categoriesData= [
   },
   {
     key: 9,
-    img: "public/furniture/img3.avif",
+    img: "/furniture/img3.avif",
     Title: "Mirror",
     category: "furniture",
     desc: "",
@@ -76,7 +76,7 @@ const categoriesData= [
   },
   {
     key: 10,
-    img: "public/plants/img3.jpg",
+    img: "/plants/img3.jpg",
     Title: "Artificial Sunflower Plant",
     category: "plants",
     desc: "",
@@ -84,7 +84,7 @@ const categoriesData= [
   },
   {
     key: 11,
-    img: "public/softToys/img3.jpg",
+    img: "/softToys/img3.jpg",
     Title: "Teddy bear",
     category: "soft toys",
     desc: "",
@@ -92,7 +92,7 @@ const categoriesData= [
   },
   {
     key: 12,
-    img: "public/lamps/img3.jpg",
+    img: "/lamps/img3.jpg",
     Title: "Night Lamp",
     category: "lamps",
     desc: "",
@@ -100,7 +100,7 @@ const categoriesData= [
   },
   {
     key: 13,
-    img: "public/furniture/img4.avif",
+    img: "/furniture/img4.avif",
     Title: "Wardrobe",
     category: "furniture",
     desc: "",
@@ -108,7 +108,7 @@ const categoriesData= [
   },
   {
     key: 15,
-    img: "public/softToys/img4.jpg",
+    img: "/softToys/img4.jpg",
     Title: "Teddy bear",
     category: "soft toys",
     desc: "",
@@ -116,7 +116,7 @@ const categoriesData= [
   },
   {
     key: 16,
-    img: "public/lamps/img4.jpg",
+    img: "/lamps/img4.jpg",
     Title: "Night Lamp",
     category: "lamps",
     desc: "",

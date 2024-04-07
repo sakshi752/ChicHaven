@@ -6,22 +6,22 @@ const HeroSection = () => {
 const heroImages=[
     {
         key:'img1',
-        img:"public/hero images/live comfortably.jpg",
+        img:"/hero images/live comfortably.jpg",
         imgTitle:"Live Comfortably"
     },
     {
         key:'img2',
-        img:"public/hero images/lamps.jpg",
+        img:"/hero images/lamps.jpg",
         imgTitle:"Lamps"
     },
     {
         key:'img3',
-        img:"public/hero images/plants.jpg",
+        img:"/hero images/plants.jpg",
         imgTitle:"Plants"
     },
     {
         key:'img4',
-        img:"public/hero images/soft toys.jpg",
+        img:"/hero images/soft toys.jpg",
         imgTitle:"Soft Toys"
     },
 ]
