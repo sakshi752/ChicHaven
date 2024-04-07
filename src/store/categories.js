@@ -133,7 +133,8 @@ const categoriesSlice = createSlice({
   reducers: {
     setCategoryTitle(state, action) {
       state.categoryTitle = action.payload;
-      state.data=(action.payload.toLowerCase()!=='all')?categoriesData.filter(item=>item.category===action.payload.toLowerCase()):categoriesData
+      state.data=(action.payload.toLowerCase()!=='all')?categoriesData.filter(item=>item.category===action.payload.toLowerCase())
+      :categoriesData
     }
   }
 })

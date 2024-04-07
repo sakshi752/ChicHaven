@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCategoryTitle } from '../../store/categories';
-import CardComponent from '../CardComponent';
+import CardComponent from './CardComponent';
 
 const Categories = () => {
 

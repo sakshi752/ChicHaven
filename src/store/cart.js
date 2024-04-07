@@ -80,12 +80,12 @@ const cartSlice = createSlice({
             if (item && item.count > 1) {
                 item.count -= 1;
                 item.totalPrice = item.count * item.price;
-                state.totalAmt = state.items.reduce((total, item) => total + item.totalPrice, 0);
             }
             else {
                 state.items = state.items.filter((item) => item.key !== cartItemId);
-                state.totalAmt = state.items.reduce((total, item) => total + item.totalPrice, 0);
+                item.totalPrice = item.count * item.price;
             }
+            state.totalAmt = state.items.reduce((total, item) => total + item.totalPrice, 0);
             window.localStorage.setItem("cartItems", JSON.stringify(state.items));
             window.localStorage.setItem("totalAmt", JSON.stringify(state.totalAmt));
         },
